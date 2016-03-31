@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * alter node edit forms
+ */
+function form_tabs_deeplinks_form_alter(&$form, &$form_state, $form_id) {
+  $form['#after_build'][] = 'form_tabs_deeplinks_after_build';
+}
+
+/**
+ * attach the js
+ */
+function form_tabs_deeplinks_after_build($form, &$form_state) {
+  $path = drupal_get_path('module', 'form_tabs_deeplinks');
+  drupal_add_js($path . '/jquery.ba-hashchange.min.js');
+  drupal_add_js($path . '/form_tabs_deeplinks.js');
+  return $form; 
+}

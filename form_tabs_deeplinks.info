@@ -1,0 +1,6 @@
+name = Form Tabs Deeplinks
+description = Active URL history and enable deep linking for form tab groups
+core = 7.x
+package = form_tabs_deeplinks
+files[] = jquery.ba-hashchange.min.js
+files[] = form_tabs_deeplinks.js
